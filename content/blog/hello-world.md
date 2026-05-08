@@ -2,7 +2,7 @@
 title: "Hello, World!"
 date: "2026-05-07"
 tags: [hello, inkwell]
-categories: [general]
+categories: [general, stuff]
 ---
 
 # Hello, World!
