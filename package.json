@@ -1,0 +1,9 @@
+{
+  "name": "my-blog-inkwell",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "inkwell build",
+    "serve": "inkwell serve"
+  }
+}

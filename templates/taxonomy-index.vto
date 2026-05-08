@@ -1,0 +1,12 @@
+{{- set content }}
+<h1>{{ listing.title }}</h1>
+<ul>
+  {{ for term of listing.terms }}
+  <li>
+    <a href="{{ term.url }}">{{ term.name }}</a>
+    <span>({{ term.count }})</span>
+  </li>
+  {{ /for }}
+</ul>
+{{- /set }}
+{{ include "_partials/layout.vto" { content, title: listing.title } }}
