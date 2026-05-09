@@ -24,6 +24,6 @@ export default {
   // Default Shiki languages: javascript, typescript, php, html, erb, go, json, liquid, markdown, ruby, css
   // Add more languages as needed:
   shiki: {
-    langs: ["python", "rust", "bash", "twig", "jinja"],
+    langs: ["python", "rust", "bash", "twig", "jinja", "diff"],
   },
 };
