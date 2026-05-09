@@ -11,7 +11,7 @@ export default {
 
   collections: [
     {
-      name: "posts",
+      name: "blog",
       pageSize: 5,
     },
   ],

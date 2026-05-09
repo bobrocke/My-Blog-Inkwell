@@ -1,0 +1,23 @@
+{{# {{ include "_partials/layout.vto" { content: page.html, title: page.frontmatter.title } }} #}}
+
+{{ layout "base.vto" }}
+  {{ include "partials/post-meta-dates.vto" }}
+  <h1>{{ page.frontmatter.title }}</h1>
+  Categories:
+  {{ for category of page.frontmatter.categories }}
+     <a href="{{ termUrl("categories", category) }}">{{ category }}</a>
+  {{ /for }}
+  Tags:
+  {{ for tag of page.frontmatter.tags }}
+     <a href="{{ termUrl("tags", tag) }}">{{ tag }}</a>
+  {{ /for }}
+  {{ page.html }}
+
+  {{ if page.prev }}
+    <a href="{{ page.prev.url }}">← Previous Post</a>
+  {{ /if }}
+  {{ if page.next }}
+    <a href="{{ page.next.url }}">Next Post →</a>
+  {{ /if }}
+
+{{ /layout }}
