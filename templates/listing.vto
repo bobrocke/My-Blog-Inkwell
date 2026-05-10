@@ -1,20 +1,43 @@
-{{- set content }}
-<h1>{{ listing.title ?? listing.collection }}</h1>
-<ul>
-  {{ for p of listing.pages }}
-  <li>
-    <a href="{{ p.url }}">{{ p.frontmatter.title }}</a>
-    {{ if p.frontmatter.date }}
-      <time>{{ p.frontmatter.date }}</time>
-    {{ /if }}
-  </li>
-  {{ /for }}
-</ul>
-{{ if listing.pagination.prevUrl }}
-  <a href="{{ listing.pagination.prevUrl }}">← Newer</a>
-{{ /if }}
-{{ if listing.pagination.nextUrl }}
-  <a href="{{ listing.pagination.nextUrl }}">Older →</a>
-{{ /if }}
-{{- /set }}
-{{ include "partials/layout.vto" { content, title: listing.title } }}
+{{ layout "base.vto" }}
+
+  <div class="wrapper">
+    <div class="stack" data-space="2xl">
+      <div class="page-hero">
+        <p class="page-hero__eyebrow">Archive</p>
+        <h1 class="page-hero__title">{{ listing.title ?? listing.collection }}</h1>
+      </div>
+
+      <div class="grid" data-layout="2-col">
+        {{ for p of listing.pages }}
+          <article class="post-card">
+            {{ if p.frontmatter.date }}
+              <time class="post-card__date" datetime="{{ p.frontmatter.date }}">
+                {{ p.date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) }}
+              </time>
+            {{ /if }}
+            <h2 class="post-card__title">
+              <a href="{{ p.url }}">{{ p.frontmatter.title }}</a>
+            </h2>
+            {{ if p.excerpt }}
+              <p class="post-card__excerpt">{{ p.excerpt }}</p>
+            {{ /if }}
+          </article>
+        {{ /for }}
+      </div>
+
+      {{ if listing.pagination.prevUrl || listing.pagination.nextUrl }}
+        <nav class="pagination" aria-label="Page navigation">
+          {{ if listing.pagination.prevUrl }}
+            <a href="{{ listing.pagination.prevUrl }}" class="pagination__link">← Newer</a>
+          {{ else }}
+            <span></span>
+          {{ /if }}
+          {{ if listing.pagination.nextUrl }}
+            <a href="{{ listing.pagination.nextUrl }}" class="pagination__link">Older →</a>
+          {{ /if }}
+        </nav>
+      {{ /if }}
+    </div>
+  </div>
+
+{{ /layout }}

@@ -1,18 +1,10 @@
-{{# {{ include "_partials/layout.vto" { content: page.html, title: page.frontmatter.title } }} #}}
-
 {{ layout "base.vto" }}
-  {{ page.frontmatter.title }} <br>
-  Categories:
-  {{ for category of page.frontmatter.categories }}
-     <a href="{{ termUrl("categories", category) }}">{{ category }}</a>
-  {{ /for }}
-  {{ page.html }}
 
-  {{ if page.prev }}
-    <a href="{{ page.prev.url }}">← {{ page.prev.title }}</a>
-  {{ /if }}
-  {{ if page.next }}
-    <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
-  {{ /if }}
+  <div class="wrapper" data-width="narrow">
+    <div class="flow">
+      <h1>{{ page.frontmatter.title }}</h1>
+      {{ page.html }}
+    </div>
+  </div>
 
 {{ /layout }}

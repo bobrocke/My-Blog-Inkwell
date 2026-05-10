@@ -8,14 +8,20 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <header>
-      <a href="/">{{ site.config.title }}</a>
+    <header class="site-header">
+      <div class="wrapper">
+        <div class="site-header__inner">
+          <a href="/" class="site-header__logo">{{ site.config.title }}</a>
+        </div>
+      </div>
     </header>
-    <main>
+    <main class="site-main">
       {{ content }}
     </main>
-    <footer>
-      <p>Built with <a href="https://github.com/bobrocke/Inkwell">Inkwell</a></p>
+    <footer class="site-footer">
+      <div class="wrapper">
+        <p>Built with <a href="https://github.com/bobrocke/Inkwell">Inkwell</a></p>
+      </div>
     </footer>
   </body>
 </html>

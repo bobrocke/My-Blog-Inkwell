@@ -1,6 +1,7 @@
 ---
 title: "Hello, World!"
 date: "2026-05-07"
+lastmod: "2026-05-09"
 tags: [hello, inkwell]
 categories: [general, stuff]
 ---

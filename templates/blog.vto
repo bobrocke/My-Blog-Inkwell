@@ -1,23 +1,51 @@
-{{# {{ include "_partials/layout.vto" { content: page.html, title: page.frontmatter.title } }} #}}
-
 {{ layout "base.vto" }}
-  {{ include "partials/post-meta-dates.vto" }}
-  <h1>{{ page.frontmatter.title }}</h1>
-  Categories:
-  {{ for category of page.frontmatter.categories }}
-     <a href="{{ termUrl("categories", category) }}">{{ category }}</a>
-  {{ /for }}
-  Tags:
-  {{ for tag of page.frontmatter.tags }}
-     <a href="{{ termUrl("tags", tag) }}">{{ tag }}</a>
-  {{ /for }}
-  {{ page.html }}
 
-  {{ if page.prev }}
-    <a href="{{ page.prev.url }}">← Previous Post</a>
-  {{ /if }}
-  {{ if page.next }}
-    <a href="{{ page.next.url }}">Next Post →</a>
-  {{ /if }}
+  <div class="wrapper" data-width="content">
+    <article class="post">
+      <header class="post__header">
+      {{ include "partials/post-meta-dates.vto" }}
+      <h1 class="post__title">{{ page.frontmatter.title }}</h1>
+      <div class="post__meta">
+        {{ if page.frontmatter.categories }}
+          <ul class="tag-list">
+            {{ for category of page.frontmatter.categories }}
+              <li><a href="{{ termUrl("categories", category) }}" class="tag">{{ category }}</a></li>
+            {{ /for }}
+          </ul>
+        {{ /if }}
+        {{ if page.frontmatter.tags }}
+          <ul class="tag-list">
+            {{ for tag of page.frontmatter.tags }}
+              <li><a href="{{ termUrl("tags", tag) }}" class="tag" data-variant="accent">{{ tag }}</a></li>
+            {{ /for }}
+          </ul>
+        {{ /if }}
+      </div>
+    </header>
+
+    <div class="post__body flow">
+      {{ page.html }}
+    </div>
+
+    <footer class="post__footer">
+      {{ if page.prev || page.next }}
+        <nav class="post__nav" aria-label="Post navigation">
+          {{ if page.prev }}
+            <a href="{{ page.prev.url }}" class="post__nav-link post__nav-link--prev">
+              <span class="post__nav-label">← Previous</span>
+              <span class="post__nav-title">{{ page.prev.title }}</span>
+            </a>
+          {{ /if }}
+          {{ if page.next }}
+            <a href="{{ page.next.url }}" class="post__nav-link post__nav-link--next">
+              <span class="post__nav-label">Next →</span>
+              <span class="post__nav-title">{{ page.next.title }}</span>
+            </a>
+          {{ /if }}
+        </nav>
+      {{ /if }}
+    </footer>
+    </article>
+  </div>
 
 {{ /layout }}

@@ -1,12 +1,22 @@
-{{- set content }}
-<h1>{{ listing.title }}</h1>
-<ul>
-  {{ for term of listing.terms }}
-  <li>
-    <a href="{{ term.url }}">{{ term.name }}</a>
-    <span>({{ term.count }})</span>
-  </li>
-  {{ /for }}
-</ul>
-{{- /set }}
-{{ include "partials/layout.vto" { content, title: listing.title } }}
+{{ layout "base.vto" }}
+
+  <div class="wrapper">
+    <div class="stack" data-space="xl">
+      <div class="page-hero">
+        <h1 class="page-hero__title">{{ listing.title }}</h1>
+      </div>
+
+      <ul class="taxonomy-list">
+        {{ for term of listing.terms }}
+          <li>
+            <a href="{{ term.url }}" class="taxonomy-item">
+              <span class="taxonomy-item__name">{{ term.name }}</span>
+              <span class="taxonomy-item__count">{{ term.count }} post{{ term.count !== 1 ? "s" : "" }}</span>
+            </a>
+          </li>
+        {{ /for }}
+      </ul>
+    </div>
+  </div>
+
+{{ /layout }}
