@@ -13,6 +13,7 @@ export default {
     {
       name: "blog",
       pageSize: 5,
+      url: "/",
     },
   ],
 
