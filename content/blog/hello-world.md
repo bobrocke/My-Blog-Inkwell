@@ -1,14 +1,14 @@
 ---
-title: "Hello, World!"
-date: "2026-05-07"
-lastmod: "2026-05-09"
+title: Hello, World!
+date: 2026-01-01
+lastmod: 2026-05-09
 tags: [hello, inkwell]
 categories: [general, stuff]
 ---
 
 # Hello, World!
 
-Welcome to your new **inkwell-ssg** site. Edit this post in `content/posts/hello-world.md`
+Welcome to your new **Inkwell** site. Edit this post in `content/posts/hello-world.md`
 or run `inkwell serve` to start the development server.
 
 ## Syntax highlighting

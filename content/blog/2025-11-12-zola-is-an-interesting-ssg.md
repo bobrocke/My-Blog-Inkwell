@@ -18,7 +18,7 @@ The primary, most obvious difference between creating a blog in Zola vs. Hugo is
 
 Hugo, written in Go, may be the fastest of the SSGs in building a site. But Zola, written in Rust, is every bit as fast. Nether disappoints and builds so fast you almost don't notice. This site builds in 100ms, or less, with Zola.
 
-Blogs are not very complicated websites so Zola has what you need to create one.  I think Zola should be added to [Hugo and Eleventy](@/blog/2025-08-27-hugo-or-11ty.md) when looking for a SSG for your blog. It's a little simpler than Hugo so is missing a few things that Hugo does well.
+Blogs are not very complicated websites so Zola has what you need to create one.  I think Zola should be added to [Hugo and Eleventy](/blog/2025-08-27-hugo-or-11ty/) when looking for a SSG for your blog. It's a little simpler than Hugo so is missing a few things that Hugo does well.
 
 - Asset Pipeline -- Hugo has a powerful, general purpose asset pipeline for images, stylesheets, and JavaScript. Zola will transpile SASS/SCSS to CSS and handle basic image resizing, but that's it.
 - Support -- Zola is basically a one-man show which means Vincent does the best he can responding to questions and problems. Support for Hugo comes on their Discourse Forum and is fast, detailed, and super helpful.

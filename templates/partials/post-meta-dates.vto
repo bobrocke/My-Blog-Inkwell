@@ -1,9 +1,11 @@
 <div class="post__meta">
-  <time class="post__date" datetime="{{ page.frontmatter.date }}">
-    {{ page.date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) }}
+  <time class="{{ dateClass ?? 'post__date' }}" datetime="{{ page.frontmatter.date }}">
+    {{ set localDate = new Intl.DateTimeFormat(site.config.language, { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(page.date) }}
+    {{ localDate }}
   </time>
   {{ if page.frontmatter.lastmod }}
-    <span>·</span>
-    <span>Updated: {{ page.lastmod.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) }}</span>
+    <span> &bull; </span>
+    {{ set localLastmod = new Intl.DateTimeFormat(site.config.language, { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(page.lastmod) }}
+    <span>Updated: {{ localLastmod }}</span>
   {{ /if }}
 </div>

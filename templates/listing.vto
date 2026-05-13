@@ -11,9 +11,7 @@
         {{ for p of listing.pages }}
           <article class="post-card">
             {{ if p.frontmatter.date }}
-              <time class="post-card__date" datetime="{{ p.frontmatter.date }}">
-                {{ p.date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) }}
-              </time>
+              {{ include "partials/post-meta-dates.vto" { page: p, dateClass: "post-card__date" } }}
             {{ /if }}
             <h2 class="post-card__title">
               <a href="{{ p.url }}">{{ p.frontmatter.title }}</a>
