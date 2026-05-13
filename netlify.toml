@@ -1,0 +1,3 @@
+[build]
+  command = "npx inkwell-ssg build"
+  publish = "_published"
