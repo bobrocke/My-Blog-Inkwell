@@ -26,5 +26,7 @@ export default {
   // Add more languages as needed:
   shiki: {
     langs: ["python", "rust", "bash", "twig", "jinja", "diff"],
+    lightTheme: "one-light",
+    darkTheme: "one-dark-pro",
   },
 };

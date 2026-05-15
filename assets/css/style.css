@@ -302,8 +302,11 @@ pre {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-m);
   padding: var(--space-l);
-  overflow-x: auto;
   tab-size: 2;
+  width: 100%;
+  min-width: 0;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
 }
 
 pre code {
@@ -766,6 +769,7 @@ ul, ol {
 
 .post__body {
   font-size: var(--step-0);
+  max-inline-size: var(--measure);
 }
 
 .post__footer {
@@ -1127,6 +1131,16 @@ a.pagination__btn:hover {
   --color-border-subtle:  #3a3a3c;
   --color-code-bg:        #2c2c2e;
   --color-code-text:      #ff7675;
+}
+
+/* Shiki dual-theme: activate dark variables when dark mode is on */
+[data-theme="dark"] .shiki,
+[data-theme="dark"] .shiki span {
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg) !important;
+  font-style: var(--shiki-dark-font-style) !important;
+  font-weight: var(--shiki-dark-font-weight) !important;
+  text-decoration: var(--shiki-dark-text-decoration) !important;
 }
 
 [data-theme="dark"] .icon--sun  { display: block; }
