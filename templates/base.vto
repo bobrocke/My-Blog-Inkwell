@@ -6,22 +6,48 @@
     <meta name="generator" content="Inkwell">
     <title>{{ title ?? site.config.title }}</title>
     <link rel="stylesheet" href="/css/style.css" />
+    <script>
+      (function () {
+        const t = localStorage.getItem('theme');
+        if (t) document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
   </head>
   <body>
     <header class="site-header">
       <div class="wrapper">
         <div class="site-header__inner">
           <a href="/" class="site-header__logo">{{ site.config.title }}</a>
+          {{ include "partials/nav.vto" }}
         </div>
       </div>
     </header>
     <main class="site-main">
       {{ content }}
     </main>
-    <footer class="site-footer">
-      <div class="wrapper">
-        <p>Built with <a href="https://github.com/bobrocke/Inkwell">Inkwell</a></p>
-      </div>
-    </footer>
+    {{ include "partials/footer.vto" }}
+    <script>
+      // Theme toggle
+      const themeToggle = document.getElementById('theme-toggle');
+      function effectiveTheme() {
+        return localStorage.getItem('theme') ||
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      }
+      themeToggle?.addEventListener('click', function () {
+        const next = effectiveTheme() === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+      });
+
+      // Hamburger toggle
+      const navToggle = document.getElementById('nav-toggle');
+      const siteNav = document.getElementById('site-nav');
+      navToggle?.addEventListener('click', function () {
+        const open = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!open));
+        navToggle.setAttribute('aria-label', open ? 'Open navigation' : 'Close navigation');
+        siteNav.classList.toggle('is-open', !open);
+      });
+    </script>
   </body>
 </html>

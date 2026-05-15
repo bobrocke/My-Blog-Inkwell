@@ -23,18 +23,7 @@
         {{ /for }}
       </div>
 
-      {{ if listing.pagination.prevUrl || listing.pagination.nextUrl }}
-        <nav class="pagination" aria-label="Page navigation">
-          {{ if listing.pagination.prevUrl }}
-            <a href="{{ listing.pagination.prevUrl }}" class="pagination__link">← Newer</a>
-          {{ else }}
-            <span></span>
-          {{ /if }}
-          {{ if listing.pagination.nextUrl }}
-            <a href="{{ listing.pagination.nextUrl }}" class="pagination__link">Older →</a>
-          {{ /if }}
-        </nav>
-      {{ /if }}
+      {{ include "partials/pagination.vto" }}
     </div>
   </div>
 

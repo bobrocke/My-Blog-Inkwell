@@ -1,0 +1,52 @@
+{{ if listing.pagination.totalPages > 1 }}
+  {{ set firstUrl = listing.url.replace(/\/page\/\d+\/$/, '/') }}
+  {{ set lastUrl = firstUrl + 'page/' + listing.pagination.totalPages + '/' }}
+  {{ set isFirst = listing.pagination.currentPage === 1 }}
+  {{ set isLast = listing.pagination.currentPage === listing.pagination.totalPages }}
+
+  <nav class="pagination" aria-label="Page navigation">
+    {{ if isFirst }}
+      <span class="pagination__btn pagination__btn--disabled" aria-disabled="true" aria-label="First page">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="11 17 5 12 11 7"/><polyline points="18 17 12 12 18 7"/></svg>
+      </span>
+    {{ else }}
+      <a href="{{ firstUrl }}" class="pagination__btn" aria-label="First page">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="11 17 5 12 11 7"/><polyline points="18 17 12 12 18 7"/></svg>
+      </a>
+    {{ /if }}
+
+    {{ if isFirst }}
+      <span class="pagination__btn pagination__btn--disabled" aria-disabled="true" aria-label="Previous page">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </span>
+    {{ else }}
+      <a href="{{ listing.pagination.prevUrl }}" class="pagination__btn" aria-label="Previous page">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </a>
+    {{ /if }}
+
+    <span class="pagination__info">
+      Page {{ listing.pagination.currentPage }} of {{ listing.pagination.totalPages }}
+    </span>
+
+    {{ if isLast }}
+      <span class="pagination__btn pagination__btn--disabled" aria-disabled="true" aria-label="Next page">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </span>
+    {{ else }}
+      <a href="{{ listing.pagination.nextUrl }}" class="pagination__btn" aria-label="Next page">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+    {{ /if }}
+
+    {{ if isLast }}
+      <span class="pagination__btn pagination__btn--disabled" aria-disabled="true" aria-label="Last page">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 17 19 12 13 7"/><polyline points="6 17 12 12 6 7"/></svg>
+      </span>
+    {{ else }}
+      <a href="{{ lastUrl }}" class="pagination__btn" aria-label="Last page">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 17 19 12 13 7"/><polyline points="6 17 12 12 6 7"/></svg>
+      </a>
+    {{ /if }}
+  </nav>
+{{ /if }}
