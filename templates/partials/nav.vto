@@ -2,10 +2,34 @@
 
 <nav class="site-nav-wrapper" aria-label="Main navigation">
   <ul class="site-nav" id="site-nav" role="list">
-    <li><a href="/"{{ if currentUrl === "/" || currentUrl.startsWith("/page/") }} aria-current="page"{{ /if }}>Home</a></li>
-    <li><a href="/categories/"{{ if currentUrl.startsWith("/categories") }} aria-current="page"{{ /if }}>Categories</a></li>
-    <li><a href="/tags/"{{ if currentUrl.startsWith("/tags") }} aria-current="page"{{ /if }}>Tags</a></li>
-    <li><a href="/about/"{{ if currentUrl.startsWith("/about") }} aria-current="page"{{ /if }}>About</a></li>
+    <li>
+      {{ if currentUrl === "/" || currentUrl.startsWith("/page/") }}
+        <span class="site-nav__current">Home</span>
+      {{ else }}
+        <a href="/">Home</a>
+      {{ /if }}
+    </li>
+    <li>
+      {{ if currentUrl.startsWith("/categories") }}
+        <span class="site-nav__current">Categories</span>
+      {{ else }}
+        <a href="/categories/">Categories</a>
+      {{ /if }}
+    </li>
+    <li>
+      {{ if currentUrl.startsWith("/tags") }}
+        <span class="site-nav__current">Tags</span>
+      {{ else }}
+        <a href="/tags/">Tags</a>
+      {{ /if }}
+    </li>
+    <li>
+      {{ if currentUrl.startsWith("/about") }}
+        <span class="site-nav__current">About</span>
+      {{ else }}
+        <a href="/about/">About</a>
+      {{ /if }}
+    </li>
   </ul>
 
   <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">

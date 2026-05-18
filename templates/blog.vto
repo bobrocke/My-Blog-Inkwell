@@ -5,22 +5,7 @@
       <header class="post__header">
       {{ include "partials/post-meta-dates.vto" }}
       <h1 class="post__title">{{ page.frontmatter.title }}</h1>
-      <div class="post__meta">
-        {{ if page.frontmatter.categories }}
-          <ul class="tag-list">
-            {{ for category of page.frontmatter.categories }}
-              <li><a href="{{ termUrl("categories", category) }}" class="tag">{{ category }}</a></li>
-            {{ /for }}
-          </ul>
-        {{ /if }}
-        {{ if page.frontmatter.tags }}
-          <ul class="tag-list">
-            {{ for tag of page.frontmatter.tags }}
-              <li><a href="{{ termUrl("tags", tag) }}" class="tag" data-variant="accent">{{ tag }}</a></li>
-            {{ /for }}
-          </ul>
-        {{ /if }}
-      </div>
+      {{ include "partials/post-meta-tax.vto" { categories: page.frontmatter.categories ?? [], tags: page.frontmatter.tags ?? [], page: page } }}
     </header>
 
     <div class="post__body flow">

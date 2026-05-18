@@ -11,11 +11,12 @@
           <li>
             <a href="{{ term.url }}" class="taxonomy-item">
               <span class="taxonomy-item__name">{{ term.name }}</span>
-              <span class="taxonomy-item__count">{{ term.count }} post{{ term.count !== 1 ? "s" : "" }}</span>
             </a>
           </li>
         {{ /for }}
       </ul>
+
+      {{ include "partials/pagination.vto" }}
     </div>
   </div>
 

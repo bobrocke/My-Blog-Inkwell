@@ -5,14 +5,14 @@ export default {
   description: "A site built with inkwell-ssg.",
 
   taxonomies: [
-    { name: "tags", pageSize: 5 },
-    { name: "categories", pageSize: 5 },
+    { name: "tags", pageSize: 4, indexPageSize: 8 },
+    { name: "categories", pageSize: 4, indexPageSize: 8 },
   ],
 
   collections: [
     {
       name: "blog",
-      pageSize: 5,
+      pageSize: 4,
       url: "/",
     },
   ],
