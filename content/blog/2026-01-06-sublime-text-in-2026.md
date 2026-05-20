@@ -12,7 +12,7 @@ I was using [Sublime Text](https://www.sublimetext.com/) back in 2016, or so. Af
 <!--more-->
 
 <figure style="float: right; width: 20%; margin: 1em 0em 1em 1em">
-  <img src="/assets/images/post-images/sublime-logo.png" alt="Sublime HQ Logo" >
+  <img src="/images/post-images/logos/sublime-logo.png" alt="Sublime HQ Logo" >
 </figure>
 
 Is Sublime Text truly a solid option in 2026? Although I think Zed is the future of native code editors, Zed is still relatively new. Sublime Text is plenty fast (it's written in C++), has a wealth of packages (even though some are getting pretty old and unmaintained), support on Discord is excellent, and is more easily customized than Zed (written in Rust).
@@ -23,7 +23,7 @@ Sublime Text is "done", as in essentially feature complete. More modern features
 
 Language support in Sublime Text is excellent. I often use [Liquid](https://shopify.github.io/liquid/), [Gotmpl](https://pkg.go.dev/html/template), and [Vento](https://vento.js.org/); all of their implementations as packages are better than those for Zed and even VS Code. The [ColorHelper](https://packagecontrol.io/packages/ColorHelper) package is excellent. And, to match Zed and VS Code, the [Terminus](https://packagecontrol.io/packages/Terminus) package adds a tightly integrated terminal pane.
 
-<img src="/assets/images/post-images/ZedLogo.png" alt="Zed Logo" style="float: left; width: 20%; margin: 1em 1em 1em 0em">
+<img src="/images/post-images/logos/zed-logo.png" alt="Zed Logo" style="float: left; width: 20%; margin: 1em 1em 1em 0em">
 
 If a Zed extension exists for the programming language you use and you like the results of syntax highlighting, all is well. But if you need to tweak something, get ready for a lot of studying. The tree-sitter parsers and grammar used by Zed are pretty tough to learn and Zed makes it hard to even tell what scope has been applied to which part of your code.
 
@@ -31,15 +31,17 @@ Sublime Text uses the old TextMate approach to syntax definitions (.tmLanguage),
 
 My configuration for Sublime Text is every bit as good as Zed for my purposes.
 
-<figure style="float: left; width: 50%; margin: 1em 1em 1em 0em">
-  <a class="glightbox" href="/assets/images/post-images/sublime-interface-find.png"><img src="/assets/images/post-images/sublime-interface-find.png" alt="Sublime Text Find Interface"></a>
-</figure>
-
-<figure style="float: left; width: 50%; margin: 1em 1em 1em 0em">
-  <a class="glightbox" href="/assets/images/post-images/sublime-interface-completion.png"><img src="/assets/images/post-images/sublime-interface-completion.png" alt="Sublime Text Completion Interface" ></a>
-</figure>
-
 ## The Less Good
+
+<figure style="float: left; width: 50%; margin: 1em 1em 1em 0em">
+  <a class="glightbox" href="/images/post-images/2026/sublime-interface-find.png"><img src="/images/post-images/2026/sublime-interface-find.png" alt="Sublime Text Find Interface"></a>
+</figure>
+
+<figure style="float: left; width: 50%; margin: 1em 1em 1em 0em">
+  <a class="glightbox" href="/images/post-images/2026/sublime-interface-completion.png"><img src="/images/post-images/2026/sublime-interface-completion.png" alt="Sublime Text Completion Interface" ></a>
+</figure>
+
+
 
 But it's not all a bed of roses. You can see a bit of Sublime Text's age in some of its interface. Here are the find and code completion panels (click to enlarge). The buttons and their size are perfectly functional, but old-school.
 

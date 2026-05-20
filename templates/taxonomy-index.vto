@@ -16,7 +16,7 @@
         {{ /for }}
       </ul>
 
-      {{ include "partials/pagination.vto" }}
+      {{ include "partials/pagination.vto" { pagination: listing.pagination, baseUrl: listing.url } }}
     </div>
   </div>
 

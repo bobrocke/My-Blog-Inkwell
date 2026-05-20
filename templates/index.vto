@@ -1,20 +1,30 @@
 {{ layout "base.vto" }}
 
-<div class="content">
-  {{ for post of blog }}
-    <div>
-      {{ include "partials/post-meta-dates.vto" }}
-
-      <h2 class="blog-title"><a href="{{ post.url }}">{{ post.data.title |> markdownifyInline }}</a></h2>
-
-      {{ include "partials/post-meta-tax.vto" { categories: post.data.categories ?? [], tags: post.data.tags ?? [], page: page } }}
-
-      <div class="prose post-summary">
-        {{ post.data.post_excerpt |> markdownify }}
+  <div class="wrapper">
+    <div class="stack" data-space="xs">
+      <div class="page-hero">
+        <h1 class="page-hero__title">Blog</h1>
       </div>
+
+      <div class="grid" data-layout="2-col">
+        {{ for post of blog }}
+          <article class="post-card">
+            {{ if post.frontmatter.date }}
+              {{ include "partials/post-meta-dates.vto" { page: post, dateClass: "post-card__date" } }}
+            {{ /if }}
+            <h2 class="post-card__title">
+              <a href="{{ post.url }}">{{ post.frontmatter.title }}</a>
+            </h2>
+            {{ include "partials/post-meta-tax.vto" { categories: post.frontmatter.categories ?? [], tags: post.frontmatter.tags ?? [], page: post } }}
+            {{ if post.excerpt }}
+              <p class="post-card__excerpt">{{ post.excerpt }}</p>
+            {{ /if }}
+          </article>
+        {{ /for }}
+      </div>
+
+      {{ include "partials/pagination.vto" { pagination: pagination, baseUrl: "/" } }}
     </div>
-  {{ /for }}
+  </div>
 
-  {{ include "partials/pagination.vto" { pagination: pagination, page: page } }}
-
-</div>
+{{ /layout }}

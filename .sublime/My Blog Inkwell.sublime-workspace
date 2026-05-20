@@ -7,14 +7,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/Users/bob/Projects/My Blog Inkwell/package.json",
-			"settings":
-			{
-				"buffer_size": 153,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -28,12 +20,12 @@
 		"selected_items":
 		[
 			[
-				"refresh folders",
-				"Project: Refresh Folders"
+				"Package Control: ",
+				"Package Control: Install Package"
 			],
 			[
-				"Package Control: ",
-				"Package Control: Enable Package"
+				"refresh folders",
+				"Project: Refresh Folders"
 			],
 			[
 				"",
@@ -95,24 +87,39 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/bob/Projects/My Blog Inkwell",
-		"/Users/bob/Projects/My Blog Inkwell/.sublime",
-		"/Users/bob/Projects/My Blog Inkwell/assets",
-		"/Users/bob/Projects/My Blog Inkwell/assets/css"
+		"/Users/bob/Projects/My Blog Inkwell"
 	],
 	"file_history":
 	[
+		"/Users/bob/Projects/My Blog Inkwell/inkwell-notes.md",
+		"/Users/bob/Projects/My Blog Inkwell/content/about.md",
+		"/Users/bob/Projects/My Blog Inkwell/templates/blog.vto",
+		"/Users/bob/Projects/My Blog Inkwell/content/blog/2026-01-06-sublime-text-in-2026.md",
+		"/Users/bob/Library/Mobile Documents/com~apple~CloudDocs/Sites/inkwell-notes.md",
 		"/Users/bob/Projects/My Blog Inkwell/.gitignore",
-		"/Users/bob/Projects/My Blog Inkwell/.sublime/My Blog Inkwell.sublime-project",
+		"/Users/bob/Library/Mobile Documents/com~apple~CloudDocs/Documents/Development/SSG Notes/zola_notes.md",
+		"/Users/bob/.config/opencode/opencode-model-router/tiers.json",
+		"/Users/bob/.config/opencode/opencode.json",
+		"/Users/bob/Projects/My Blog Inkwell/assets/css/style.css",
+		"/Users/bob/Projects/My Blog Inkwell/templates/partials/post-meta-dates.vto",
+		"/Users/bob/Projects/My Blog Inkwell/templates/partials/post-meta-tax.vto",
+		"/Users/bob/.zshrc",
+		"/Users/bob/Projects/My Blog Inkwell/templates/blog-listing.vto",
+		"/Users/bob/Projects/My Blog Inkwell/templates/listing.vto",
 		"/Users/bob/Projects/My Blog Inkwell/content/blog/hello-world.md",
-		"/Users/bob/Projects/My Blog Inkwell/content/index.md",
+		"/Users/bob/Projects/My Blog Inkwell/templates/taxonomy-index.vto",
+		"/Users/bob/Projects/My Blog Inkwell/inkwell.config.js",
+		"/Users/bob/Projects/My Blog Inkwell/templates/base.vto",
+		"/Users/bob/Projects/My Blog Inkwell/templates/partials/nav.vto",
+		"/Users/bob/Projects/My Blog Inkwell/content/blog/2025-11-25-im-not-missing-tailwind.md",
 		"/Users/bob/Projects/My Blog Inkwell/templates/page.vto",
+		"/Users/bob/Projects/My Blog Inkwell/content/blog/2025-11-12-zola-is-an-interesting-ssg.md",
+		"/Users/bob/Projects/My Blog Inkwell/.sublime/My Blog Inkwell.sublime-project",
+		"/Users/bob/Projects/My Blog Inkwell/content/index.md",
 		"/Users/bob/Projects/My-Blog-Zola/sass/_global.scss",
 		"/Users/bob/Library/Application Support/Sublime Text/Packages/SideBarEnhancements/Side Bar.sublime-settings",
 		"/Users/bob/Library/Application Support/Sublime Text/Packages/User/Side Bar.sublime-settings",
-		"/Users/bob/.zshrc",
 		"/Users/bob/Sites/rails notes.txt",
-		"/Users/bob/.config/opencode/opencode.json",
 		"/Users/bob/.local/share/opencode/auth.json",
 		"/Users/bob/Documents/Development/Text Colors/Color System/code.njk",
 		"/Users/bob/Documents/Development/Text Colors/Color System/code.vto",
@@ -149,7 +156,7 @@
 	],
 	"find":
 	{
-		"height": 67.0
+		"height": 45.0
 	},
 	"find_in_files":
 	{
@@ -163,6 +170,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"page-hero__title",
+			"padding-block"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -184,76 +193,6 @@
 		{
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/Users/bob/Projects/My Blog Inkwell/package.json",
-					"selected": true,
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 153,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								153,
-								153
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": "<",
-									"selector": "text.html, text.xml"
-								},
-								{
-									"rhs_empty": true,
-									"selector": "punctuation.accessor"
-								},
-								{
-									"selector": "- comment - punctuation.separator - punctuation.definition.string.end - constant.character.escape - invalid.illegal - punctuation.section.mapping - punctuation.section.sequence",
-									"server": "LSP-json"
-								}
-							],
-							"color_helper.refresh": true,
-							"color_helper.scan":
-							{
-								"allow_scanning": false,
-								"color_class":
-								[
-									{
-										"class": "css-level-4",
-										"scopes": ""
-									}
-								],
-								"color_trigger": "(?xi)\n(?:\n    \\b(?<![-#&$])(?:\n        color\\((?!\\s*-)|(?:hsla?|(?:ok)?(?:lch|lab)|hwb|rgba?)\\(\n) |\n\\b(?<![-#&$])[\\w]{3,}(?![(-])\\b|(?<![&])\\#)\n",
-								"current_ext": ".json",
-								"current_syntax": "JSON/JSON",
-								"enabled": true,
-								"last_updated": 1778346778.89,
-								"scanning": "-comment"
-							},
-							"lsp_active": true,
-							"lsp_uri": "file:///Users/bob/Projects/My%20Blog%20Inkwell/package.json",
-							"show_definitions": false,
-							"syntax": "Packages/JSON/JSON.sublime-syntax",
-							"tab_size": 2,
-							"tabs_extra_last_activated": 1778346832.79,
-							"tabs_extra_last_activated_sheet_index": 0,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"stack_multiselect": false,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -297,7 +236,7 @@
 	},
 	"output.Terminus":
 	{
-		"height": 299.0,
+		"height": 246.0,
 		"history":
 		[
 		]

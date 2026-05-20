@@ -1,3 +1,5 @@
+{{ set checkUrl = listingUrl ?? page.url }}
+
 <div class="post__meta">
   {{ if categories }}
     <span class="post__meta-icon" aria-hidden="true">
@@ -9,9 +11,8 @@
       {{ for category of categories }}
         {{ set categoryUrl = termUrl("categories", category) }}
         <li>
-          {{ set isOnCategoryPage = page && page.url && page.url.includes(categoryUrl) }}
-          {{ if isOnCategoryPage }}
-            <span class="tax-inline-link">{{ category }}</span>
+          {{ if checkUrl.includes(categoryUrl) }}
+            <span>{{ category }}</span>
           {{ else }}
             <a href="{{ categoryUrl }}" class="tax-inline-link">{{ category }}</a>
           {{ /if }}
@@ -30,9 +31,8 @@
       {{ for tag of tags }}
         {{ set tagUrl = termUrl("tags", tag) }}
         <li>
-          {{ set isOnTagPage = page && page.url && page.url.includes(tagUrl) }}
-          {{ if isOnTagPage }}
-            <span class="tax-inline-link">{{ tag }}</span>
+          {{ if checkUrl.includes(tagUrl) }}
+            <span>{{ tag }}</span>
           {{ else }}
             <a href="{{ tagUrl }}" class="tax-inline-link">{{ tag }}</a>
           {{ /if }}

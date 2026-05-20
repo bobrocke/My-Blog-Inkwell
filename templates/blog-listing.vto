@@ -11,7 +11,7 @@
             <h2 class="post-card__title">
               <a href="{{ p.url }}">{{ p.frontmatter.title }}</a>
             </h2>
-            {{ include "partials/post-meta-tax.vto" { categories: p.frontmatter.categories ?? [], tags: p.frontmatter.tags ?? [] } }}
+            {{ include "partials/post-meta-tax.vto" { categories: p.frontmatter.categories ?? [], tags: p.frontmatter.tags ?? [], page: p, listingUrl: listing.url } }}
             {{ if p.excerpt }}
               <p class="post-card__excerpt">{{ p.excerpt }}</p>
             {{ /if }}
@@ -19,7 +19,7 @@
         {{ /for }}
       </div>
 
-      {{ include "partials/pagination.vto" }}
+      {{ include "partials/pagination.vto" { pagination: listing.pagination, baseUrl: listing.url } }}
     </div>
   </div>
 
