@@ -41,14 +41,12 @@ My configuration for Sublime Text is every bit as good as Zed for my purposes.
   <a class="glightbox" href="/images/post-images/2026/sublime-interface-completion.png"><img src="/images/post-images/2026/sublime-interface-completion.png" alt="Sublime Text Completion Interface" ></a>
 </figure>
 
-
-
 But it's not all a bed of roses. You can see a bit of Sublime Text's age in some of its interface. Here are the find and code completion panels (click to enlarge). The buttons and their size are perfectly functional, but old-school.
 
 Keep an eye out for old packages meant for Sublime Text 3; some of those may not behave well in version 4. And, as you search for helpful packages, you'll start to notice many that are several years old. Sublime Text is no longer the modern darling of the developer community, so some development effort is being directed away from it.
 
 VS Code and Zed are free; Sublime Text costs $99 for a three-year license. After that, you must renew in order to continue getting updates. The good news is that one personal license covers all your computers and operating systems. That makes Sublime Text an oddity in today's market, but it's not supported by large corporations (VS Code by Microsoft and Zed by $42 million in investor funding). You can see some of that lack of funding in the slow release cycle (the last update was in May).
 
-After having said that Zed is the future, it's just not ready for me yet. My major complaints are all around language support for Vento, Gotmpl, and Liquid. None are excellent and none are as good as Sublime Text's. Perhaps I put too much weight on syntax coloring in the editor, but I find it makes the code easier to read and often can point out syntax errors before build time.
+After having said that Zed is the future, it's just not ready for me yet. My major complaints are all around language support for Vento, Gotmpl, and Liquid. None are excellent and none are as good as Sublime Text's. Perhaps I put too much weight on syntax coloring in the editor, but I find it makes the code easier to read and can often point out syntax errors before build time.
 
 So, until, and if, Zed language support improves, it looks like it is, indeed, Sublime Text in 2026.

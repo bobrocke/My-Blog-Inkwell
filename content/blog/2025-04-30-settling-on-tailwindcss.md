@@ -16,12 +16,18 @@ A typical case is styling a button. Bulma lets you do it simply:
 <button class="button">Button</button>
 ```
 
+<img src="/images/post-images/logos/tailwind-logo.svg" alt="Tailwind Logo" style="float: right; width: 20%; margin: 1em 0em 1em 1em">
+
 and you get a reasonably styled button. It's easy to be sure all your buttons look the same by using the same class on all of them.
 
 TailwindCSS goes at it from another direction. You could style a button like this:
 
 ```html
-<button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Button</button>
+<button
+  class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+>
+  Button
+</button>
 ```
 
 Behind Bulma's simple `button` class is plenty of CSS scattered in many places across `bulma.css`. Here's a few examples:

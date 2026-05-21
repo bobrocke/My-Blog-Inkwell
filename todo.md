@@ -1,2 +1,1 @@
-Have AI create a design system
-
+Create a script to create a new blog post

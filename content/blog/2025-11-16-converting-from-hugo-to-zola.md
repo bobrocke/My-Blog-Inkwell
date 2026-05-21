@@ -11,7 +11,10 @@ I've made the switch from Hugo to Zola mostly because I had come to dread making
 <!--more-->
 
 ## Problems
-There are plenty of complaints across the web about the Go template language; it's powerful, but much more difficult to learn and use compared to other popular template languages such as Liquid or Jinja2. Here are a couple of small examples.
+
+<img src="/images/post-images/logos/hugo-logo-wide.svg" alt="Hugo Logo" style="float: right; width: 25%; margin: 1em 0em 1em 1em">
+
+There are plenty of complaints across the web about the Go template language; it's powerful, but much more difficult to learn and use compared with other popular template languages such as Liquid or Jinja2. Here are a couple of small examples.
 
 This initializes and sets the variable `$end` to `$start` plus `2`:
 
@@ -45,6 +48,8 @@ Verbose, repetitive, and difficult to remain consistent across the site.
 
 ## Solutions
 
+<img src="/images/post-images/logos/zola-logo.svg" alt="Zola Logo" style="float: right; width: 25%; margin: 1em 0em 1em 1em">
+
 Zola takes care of my inexperience with Go templates without giving up capabilities I need. Its Tera template language looks like Jinja2. So the examples above become:
 
 ```jinja
@@ -77,23 +82,23 @@ I wanted to create multiple CSS files for organization and have them combined in
 I also greatly simplified the styling for dark mode. The code to handle light and dark modes is this:
 
 ```css
-  /*
+/*
   Light Theme (default)
   */
-  --bg-color-light: lightgray;
-  --bg-color-black: black;
-  --color-primary: black;
-  --color-primary-dim: gray;
-  --color-primary-invert: white;
-  --color-primary-highlight: red;
+--bg-color-light: lightgray;
+--bg-color-black: black;
+--color-primary: black;
+--color-primary-dim: gray;
+--color-primary-invert: white;
+--color-primary-highlight: red;
 
-  /*
+/*
   Dark Theme
   */
-  .dark {
-    --bg-color-light: gray;
-    --color-primary-dim: DarkGray;
-  }
+.dark {
+  --bg-color-light: gray;
+  --color-primary-dim: DarkGray;
+}
 ```
 
 The only real pain point in the conversion was modifying post front matter from:
@@ -124,6 +129,7 @@ draft: false
 because Zola requires taxonomies to be explicitly identified as taxonomies.
 
 ## Future?
+
 Even with this conversion, I plan to keep a Hugo version of this site on standby in the event Zola has a badly breaking change or I find a need for a feature Zola doesn't have, but Hugo does.
 
 If I do go back to Hugo, I'll still use Tailwind, I think, but make use of its `@apply` directive to greatly reduce repetition while retaining the advantages of the Tailwind approach.

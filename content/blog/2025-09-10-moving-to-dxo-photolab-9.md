@@ -10,14 +10,13 @@ Although many prefer using PhotoLab as the central hub of their photography work
 
 <!--more-->
 
-<img src="/assets/images/post-images/lightroom-classic-logo.svg" alt="Lightroom Classic Logo" style="float: left; width: 20%; margin: 1em 1em 1em 0em">
+<img src="/images/post-images/logos/lightroom-classic-logo.svg" alt="Lightroom Classic Logo" style="float: left; width: 20%; margin: 1em 1em 1em 0em">
 
 I’ve used Lightroom for many years and never really objected to Adobe’s subscription plan. Still, I wonder if the subscription model makes them less motivated to add and improve features quickly? I’ve also never really been comfortable with its interface, even after all this time, having come from [Apple's Aperture](https://www.apple.com/welcomescreen/aperture3/). Up until now, it has done what I needed to do better than the alternatives. The alternatives are getting better and better.
 
-
 ## The Key New Features
 
-<img src="/assets//images/wp-content/uploads/2023/10/image-1.png" alt="PhotoLab Logo" style="float: right; width: 25%; margin: 1em 0em 1em 1em">
+<img src="/images/post-images/logos/photolab-logo.png" alt="PhotoLab Logo" style="float: right; width: 25%; margin: 1em 0em 1em 1em">
 
 PhotoLab 9 has made significant improvements in the areas I'm especially interested in and that had kept me from seriously considering it.
 

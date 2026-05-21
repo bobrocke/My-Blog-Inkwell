@@ -11,6 +11,8 @@ Back when I finished moving this blog from WordPress to Hugo I read about a numb
 
 <!--more-->
 
+<img src="/images/post-images/logos/11ty-logo.png" alt="11ty Logo" style="float: right; width: 25%; margin: 1em 0em 1em 1em">
+
 So I'm re-writing my blog with 11ty---no better way to learn about it.
 
 11ty documentation is solid, if a little short on API details; the search feature is pretty good. There doesn't seem to be all that much independent reference material on the web, fortunately there are a number of blog posts available about how to do things the 11ty way. And support for 11ty is exceptional on Discord. I owe @uncenter, @dwkns, @vrugtehagel, and @MWDelaney my thanks.
