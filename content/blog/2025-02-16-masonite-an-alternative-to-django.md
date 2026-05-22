@@ -9,6 +9,8 @@ Ruby on Rails, Laravel, and Django are the heavy-hitters in full-stack web devel
 
 <!--more-->
 
+<img src="/images/post-images/logos/massonite-logo.png" alt="Massonite Logo" style="float: right; width: 25%; margin: 1em 0em 1em 1em">
+
 The Masonite framework is built with Python and so is a Django competitor. It borrows heavily from Laravel and I think that's a good thing, overall. Django is a bit of an odd duck in its code organization -- it expects there to be multiple small apps contained within one project. Masonite is an MVC framework (Django is MTV - Model, Template, View), and has a code scaffolding feature that Django does not.
 
 Masonite uses `python craft` in place of Laravel's `php artisan` to create the boilerplate code for such things as controllers, views, models, and database migrations. Ruby on Rails has the same ability using `rails generate`. Django doesn't have any scaffolding out-of-the-box, but it can be added.

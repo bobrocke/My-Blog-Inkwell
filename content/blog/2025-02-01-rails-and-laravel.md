@@ -6,9 +6,11 @@ tags: [Ruby on Rails, Laravel]
 
 ---
 
-I'm finding that I really like the syntax of Ruby and the philosophy of Rails. Both are straightforward and 'clean'. But I've been tinkering with Laravel, too, because it runs on more shared hosting services since it's just good ol' PHP.
+I'm finding that I really like the syntax of Ruby and the philosophy of Ruby on Rails. Both are straightforward and 'clean'. But I've been tinkering with Laravel, too, because it runs on more shared hosting services since it's just good ol' PHP.
 
 <!--more-->
+
+<img src="/images/post-images/logos/ror-logo.svg" alt="Ruby on Rails Logo" style="float: right; width: 30%; margin: 1em 0em 1em 1em">
 
 PHP and Laravel are equally powerful, but their syntax is messy and strained. Laravel's philosophy is _explicit over implicit_, which is almost the exact opposite of Rails' _convention over configuration_. With Laravel, there's a lot of code to be written and then followed for debugging. Rails requires you to understand the conventions because there's a lot less code to read and write.
 

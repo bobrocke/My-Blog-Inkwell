@@ -17,7 +17,7 @@ I ended up replacing Aperture with Lightroom, as did many, but I never warmed to
 
 ### So why PhotoLab Elite and why now?
 
-<img src="/assets/images/wp-content/uploads/2023/10/image-1.png" alt="DxO PhotoLab Logo" style="float: right; width: 30%; margin: 1em 0em 1em 1em">
+<img src="/images/post-images/logos/photolab-logo.png" alt="DxO PhotoLab Logo" style="float: right; width: 30%; margin: 1em 0em 1em 1em">
 
 [PhotoLab Elite 6](https://www.dxo.com/dxo-photolab/) has added enough Digital Asset Management (DAM) features to offer the basics of keywords and IPTC data (but still no presets) along with image ratings and flags. Other upgrades from PhotoLab 5 are an improved repair tool (but still not context-sensitive), even better denoise algorithms, the inclusion of keystone removal tools from [DxO ViewPoint](https://www.dxo.com/dxo-viewpoint/), a new wide gamut working color space, and soft proofing. Together, these features bring PhotoLab into a competitive position with both [Capture One](https://www.captureone.com/en) and [Lightroom Classic](https://www.adobe.com/products/photoshop-lightroom-classic.html).
 
@@ -32,7 +32,7 @@ My motivation to switch comes from a number of things, some big and some small.
 
 ### What do I miss from Lightroom Classic?
 
-<img src="https://images.squarespace-cdn.com/content/v1/641f4673ddd4f748a3e6b2f6/9a7ac23e-9add-4b41-acb2-b6856ab64e13/LrC.png" alt="Lightroom Classic Logo" style="float: right; width: 30%; margin: 1em 0em 1em 1em">
+<img src="/images/post-images/logos/lightroom-classic-logo.svg" alt="Lightroom Classic Logo" style="float: right; width: 25%; margin: 1em 0em 1em 1em">
 
 PhotoLab Elite is only competitive with Lightroom Classic; it’s not yet better overall. And it may never be because of Adobe’s head start. The main things I miss from Lightroom Classic are:
 

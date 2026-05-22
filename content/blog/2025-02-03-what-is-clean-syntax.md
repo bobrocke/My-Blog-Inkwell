@@ -59,4 +59,4 @@ So combining Rails _convention over configuration_ with Ruby's simple syntax res
 
 Needless to say, once you've worked with PHP and Laravel for a while, you eye will not notice the complexity of the code quite as much. And you may actually prefer being explicit about what you want the code to do.
 
-But I'm a hobbyist without the experience to digest a block of PHP or to know what classes and namespaces to include as quickly as the professionals can. So I'm liking Ruby on Rails, so far.
+But I'm a hobbyist without the experience to digest a block of PHP or to know what classes and namespaces to include as quickly as the professionals can. So I'm liking Ruby on Rails, at least for now.
