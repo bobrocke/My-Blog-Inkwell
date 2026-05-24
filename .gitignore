@@ -3,3 +3,4 @@ dist/
 _published/
 .sublime/
 inkwell-notes.md
+.claude/
