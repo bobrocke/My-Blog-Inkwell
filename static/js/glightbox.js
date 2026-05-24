@@ -2060,16 +2060,26 @@
         if (overlay) overlay.style.background = 'rgba(0, 0, 0, 0.6)';
         var slide = document.querySelector('.gslide.current');
         if (slide) { slide.style.width = '80vw'; slide.style.margin = '0 auto'; }
+<<<<<<< HEAD
         var inner = slide ? slide.querySelector('.gslide-inner-content') : null;
         if (inner) inner.style.width = '100%';
         var gc = slide ? slide.querySelector('.ginner-container') : null;
+=======
+        var inner = document.querySelector('.gslide-inner-content');
+        if (inner) inner.style.width = '100%';
+        var gc = document.querySelector('.ginner-container');
+>>>>>>> origin/main
         if (gc) gc.style.cssText = 'width:100%;max-width:100%;height:auto;background:#000;flex-direction:column';
         var imgs = document.querySelectorAll('.gslide-image img');
         imgs.forEach(function (img) {
           img.style.cssText = 'width:100%;height:auto;max-height:82vh;object-fit:contain';
         });
+<<<<<<< HEAD
         var curSlide = document.querySelector('.gslide.current');
         if (curSlide && !curSlide.querySelector('.gl-caption')) {
+=======
+        if (!document.querySelector('.gl-caption')) {
+>>>>>>> origin/main
           var text = '';
           var el = lb.elements[lb.index];
           if (el && el.slideConfig) {
@@ -2080,8 +2090,13 @@
             }
           }
           if (text) {
+<<<<<<< HEAD
             var container = curSlide.querySelector('.ginner-container');
             var media = curSlide.querySelector('.gslide-media');
+=======
+            var container = document.querySelector('.ginner-container');
+            var media = document.querySelector('.gslide-media');
+>>>>>>> origin/main
             if (container && media) {
               var cap = document.createElement('div');
               cap.className = 'gl-caption';
