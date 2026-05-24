@@ -2053,7 +2053,56 @@
     slideInserted: null,
     slideRemoved: null,
     slideExtraAttributes: null,
-    onOpen: null,
+    onOpen: function () {
+      var lb = this;
+      function apply() {
+        var overlay = document.querySelector('.goverlay');
+        if (overlay) overlay.style.background = 'rgba(0, 0, 0, 0.6)';
+        var slide = document.querySelector('.gslide.current');
+        if (slide) { slide.style.width = '80vw'; slide.style.margin = '0 auto'; }
+        var inner = document.querySelector('.gslide-inner-content');
+        if (inner) inner.style.width = '100%';
+        var gc = document.querySelector('.ginner-container');
+        if (gc) gc.style.cssText = 'width:100%;max-width:100%;height:auto;background:#000;flex-direction:column';
+        var imgs = document.querySelectorAll('.gslide-image img');
+        imgs.forEach(function (img) {
+          img.style.cssText = 'width:100%;height:auto;max-height:82vh;object-fit:contain';
+        });
+        if (!document.querySelector('.gl-caption')) {
+          var text = '';
+          var el = lb.elements[lb.index];
+          if (el && el.slideConfig) {
+            text = el.slideConfig.description || '';
+            if (!text && el.node) {
+              var ti = el.node.querySelector('img');
+              if (ti) text = ti.alt || '';
+            }
+          }
+          if (text) {
+            var container = document.querySelector('.ginner-container');
+            var media = document.querySelector('.gslide-media');
+            if (container && media) {
+              var cap = document.createElement('div');
+              cap.className = 'gl-caption';
+              cap.textContent = text;
+              cap.style.cssText = 'color:#ccc;text-align:center;padding:10px 14px;font-size:0.85em;background:#111;width:100%;flex:0 0 auto;order:2';
+              container.insertBefore(cap, media.nextSibling);
+            }
+          }
+        }
+        var closeBtn = document.querySelector('.gclose');
+        if (closeBtn && slide) {
+          var sr = slide.getBoundingClientRect();
+          closeBtn.style.position = 'fixed';
+          closeBtn.style.top = (sr.top + 10) + 'px';
+          closeBtn.style.right = (window.innerWidth - sr.right + 10) + 'px';
+          closeBtn.style.left = 'auto';
+        }
+      }
+      apply();
+      setTimeout(apply, 100);
+      setTimeout(apply, 300);
+    },
     onClose: null,
     loop: false,
     zoomable: true,
@@ -2091,8 +2140,8 @@
         }
       }
     },
-    openEffect: 'zoom',
-    closeEffect: 'zoom',
+    openEffect: 'fade',
+    closeEffect: 'fade',
     slideEffect: 'slide',
     moreText: 'See more',
     moreLength: 60,
@@ -2210,7 +2259,7 @@
         this.lightboxOpen = true;
         this.trigger('open');
         if (isFunction(this.settings.onOpen)) {
-          this.settings.onOpen();
+          this.settings.onOpen.call(this);
         }
         if (isTouch$1 && this.settings.touchNavigation) {
           touchNavigation(this);

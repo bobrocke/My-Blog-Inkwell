@@ -948,3 +948,29 @@ iframe.wait-autoplay {
     background: var(--color-bg-dark);
   }
 }
+
+/* --- Custom Inkwell lightbox sizing --- */
+
+.glightbox-container .gslide.current {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.glightbox-container .ginner-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  background: #000 !important;
+  flex-direction: column !important;
+}
+
+.gslide-image img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 82vh !important;
+  object-fit: contain !important;
+}
+
+.goverlay {
+  background: rgba(0, 0, 0, 0.6) !important;
+}
