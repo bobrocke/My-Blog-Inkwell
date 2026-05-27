@@ -10,14 +10,14 @@
       {{ /if }}
     </li>
     <li>
-      {{ if currentUrl.startsWith("/categories") }}
+      {{ if currentUrl === "/categories/" }}
         <span class="site-nav__current" aria-current="page">Categories</span>
       {{ else }}
         <a href="/categories/">Categories</a>
       {{ /if }}
     </li>
     <li>
-      {{ if currentUrl.startsWith("/tags") }}
+      {{ if currentUrl === "/tags/" }}
         <span class="site-nav__current" aria-current="page">Tags</span>
       {{ else }}
         <a href="/tags/">Tags</a>
