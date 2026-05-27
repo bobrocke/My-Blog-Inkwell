@@ -1,7 +1,7 @@
 /** @type {import('inkwell-ssg').InkwellConfig} */
 export default {
   title: "My Blog Inkwell",
-  siteUrl: "https://example.com",
+  siteUrl: "https://bobrockefeller.com.com",
   description: "A site built with inkwell-ssg.",
 
   taxonomies: [

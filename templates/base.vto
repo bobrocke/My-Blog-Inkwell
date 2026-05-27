@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content="Inkwell">
     <title>{{ title ?? site.config.title }}</title>
+    <meta name="description" content="{{ page?.frontmatter?.description ?? site.config.description }}" />
+    <meta property="og:title" content="{{ title ?? site.config.title }}" />
+    <meta property="og:description" content="{{ page?.frontmatter?.description ?? site.config.description }}" />
+    <meta property="og:url" content="{{ site.config.siteUrl }}{{ page?.url ?? '/' }}" />
+    <meta property="og:type" content="{{ page ? 'article' : 'website' }}" />
+    <meta property="og:site_name" content="{{ site.config.title }}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{ title ?? site.config.title }}" />
+    <meta name="twitter:description" content="{{ page?.frontmatter?.description ?? site.config.description }}" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.config.title }}" href="/feed.xml" />
+    <link rel="canonical" href="{{ site.config.siteUrl }}{{ (listing?.url ?? page?.url ?? '/').replace(/\/page\/\d+\/$/, '/') }}" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96" />
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
@@ -13,14 +24,15 @@
     <link rel="stylesheet" href="/css/glightbox.css" />
     <link rel="stylesheet" href="/css/style.css" />
     <script>
-      (function () {
-        const t = localStorage.getItem('theme') ||
+      function effectiveTheme() {
+        return localStorage.getItem('theme') ||
           (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-theme', t);
-      })();
+      }
+      document.documentElement.setAttribute('data-theme', effectiveTheme());
     </script>
   </head>
   <body>
+    <a class="visually-hidden" href="#main-content">Skip to main content</a>
     <header class="site-header">
       <div class="wrapper">
         <div class="site-header__inner">
@@ -31,7 +43,7 @@
         </div>
       </div>
     </header>
-    <main class="site-main">
+    <main class="site-main" id="main-content" aria-label="Main content">
       {{ content }}
     </main>
     {{ include "partials/footer.vto" }}
@@ -44,10 +56,6 @@
     <script>
       // Theme toggle
       const themeToggle = document.getElementById('theme-toggle');
-      function effectiveTheme() {
-        return localStorage.getItem('theme') ||
-          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      }
       themeToggle?.addEventListener('click', function () {
         const next = effectiveTheme() === 'dark' ? 'light' : 'dark';
         document.documentElement.setAttribute('data-theme', next);
@@ -57,11 +65,35 @@
       // Hamburger toggle
       const navToggle = document.getElementById('nav-toggle');
       const siteNav = document.getElementById('site-nav');
+
+      function closeNav() {
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', 'Open navigation');
+        siteNav.classList.remove('is-open');
+        navToggle.focus();
+      }
+
+      function openNav() {
+        navToggle.setAttribute('aria-expanded', 'true');
+        navToggle.setAttribute('aria-label', 'Close navigation');
+        siteNav.classList.add('is-open');
+      }
+
       navToggle?.addEventListener('click', function () {
         const open = navToggle.getAttribute('aria-expanded') === 'true';
-        navToggle.setAttribute('aria-expanded', String(!open));
-        navToggle.setAttribute('aria-label', open ? 'Open navigation' : 'Close navigation');
-        siteNav.classList.toggle('is-open', !open);
+        open ? closeNav() : openNav();
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && siteNav.classList.contains('is-open')) {
+          closeNav();
+        }
+      });
+
+      document.addEventListener('click', function (e) {
+        if (siteNav.classList.contains('is-open') && !siteNav.contains(e.target) && e.target !== navToggle) {
+          closeNav();
+        }
       });
     </script>
   </body>

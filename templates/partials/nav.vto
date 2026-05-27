@@ -4,28 +4,28 @@
   <ul class="site-nav" id="site-nav" role="list">
     <li>
       {{ if currentUrl === "/" || currentUrl.startsWith("/page/") }}
-        <span class="site-nav__current">Home</span>
+        <span class="site-nav__current" aria-current="page">Home</span>
       {{ else }}
         <a href="/">Home</a>
       {{ /if }}
     </li>
     <li>
       {{ if currentUrl.startsWith("/categories") }}
-        <span class="site-nav__current">Categories</span>
+        <span class="site-nav__current" aria-current="page">Categories</span>
       {{ else }}
         <a href="/categories/">Categories</a>
       {{ /if }}
     </li>
     <li>
       {{ if currentUrl.startsWith("/tags") }}
-        <span class="site-nav__current">Tags</span>
+        <span class="site-nav__current" aria-current="page">Tags</span>
       {{ else }}
         <a href="/tags/">Tags</a>
       {{ /if }}
     </li>
     <li>
       {{ if currentUrl.startsWith("/about") }}
-        <span class="site-nav__current">About</span>
+        <span class="site-nav__current" aria-current="page">About</span>
       {{ else }}
         <a href="/about/">About</a>
       {{ /if }}
