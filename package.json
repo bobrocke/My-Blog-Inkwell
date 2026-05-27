@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "build": "inkwell build",
-    "serve": "inkwell serve"
+    "serve": "inkwell serve",
+    "new-post": "node scripts/new-post.js"
   },
   "dependencies": {
     "inkwell-ssg": "^0.1.0"
