@@ -1,0 +1,7 @@
+{{ layout "base.vto" }}
+
+
+{{ set image = await exif("/Peacock.jpg") }}
+<pre>{{ JSON.stringify(image, null, 2) }}</pre>
+
+<a class="glightbox" data-alt="{{ image.ImageDescription }}" href="/Peacock.jpg"><img src="/Peacock.jpg" alt="{{ image.ImageDescription }}"></a>

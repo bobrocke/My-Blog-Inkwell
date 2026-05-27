@@ -2073,7 +2073,7 @@
           var text = '';
           var el = lb.elements[lb.index];
           if (el && el.slideConfig) {
-            text = el.slideConfig.description || '';
+            text = el.slideConfig.description || el.slideConfig.alt || '';
             if (!text && el.node) {
               var ti = el.node.querySelector('img');
               if (ti) text = ti.alt || '';
