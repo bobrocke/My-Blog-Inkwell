@@ -137,10 +137,10 @@
   --_dark-bg:            #1c1c1e;
   --_dark-surface:       #2c2c2e;
   --_dark-surface-2:     #3a3a3c;
-  --_dark-text:          #f5f5f7;
-  --_dark-text-muted:    #aeaeb2;
-  --_dark-accent:        #f59e0b;
-  --_dark-accent-dark:   #fbbf24;
+  --_dark-text:          #d1d1d6;
+  --_dark-text-muted:    #8e8e93;
+  --_dark-accent:        #d97706;
+  --_dark-accent-dark:   #f59e0b;
   --_dark-accent-bg:     rgb(245 158 11 / 0.12);
   --_dark-border:        #48484a;
   --_dark-border-subtle: #3a3a3c;
@@ -785,6 +785,12 @@ ul, ol {
 
 /* --- Single post --- */
 
+.post {
+  max-inline-size: var(--measure);
+  margin-inline: auto;
+  inline-size: 100%;
+}
+
 .post__header {
   margin-block-end: var(--space-xl);
   padding-block-end: var(--space-s);
@@ -825,11 +831,9 @@ ul, ol {
 
 .post__body {
   font-size: var(--step-0);
-  max-inline-size: var(--measure);
 }
 
 .post__footer {
-  max-inline-size: var(--measure);
   margin-block-start: var(--space-xl);
   padding-block-start: var(--space-xl);
   border-block-start: 1px solid var(--color-border-subtle);

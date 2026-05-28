@@ -957,20 +957,20 @@ iframe.wait-autoplay {
 }
 
 .glightbox-container .ginner-container {
-  width: 100% !important;
-  max-width: 100% !important;
-  height: auto !important;
-  background: #000 !important;
-  flex-direction: column !important;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  background: #000;
+  flex-direction: column;
 }
 
 .gslide-image img {
-  width: 100% !important;
-  height: auto !important;
+  width: 100%;
+  height: auto;
   max-height: 82vh !important;
-  object-fit: contain !important;
+  object-fit: contain;
 }
 
 .goverlay {
-  background: rgba(0, 0, 0, 0.6) !important;
+  background: rgba(0, 0, 0, 0.6);
 }
