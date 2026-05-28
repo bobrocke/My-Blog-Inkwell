@@ -1165,6 +1165,10 @@ a.pagination__btn:hover {
   .callout[data-variant="success"] { background-color: rgb(5 150 105 / 0.12); }
 }
 
+[data-theme="dark"] .callout[data-variant="warning"] { background-color: rgb(217 119 6 / 0.12); }
+[data-theme="dark"] .callout[data-variant="danger"]  { background-color: rgb(220 38 38 / 0.12); }
+[data-theme="dark"] .callout[data-variant="success"] { background-color: rgb(5 150 105 / 0.12); }
+
 /* --- Button --- */
 
 .btn {

@@ -14,7 +14,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="{{ title ?? site.config.title }}" />
     <meta name="twitter:description" content="{{ page?.frontmatter?.description ?? site.config.description }}" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.config.title }}" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.config.title }}" href="/rss.xml" />
     <link rel="canonical" href="{{ site.config.siteUrl }}{{ (listing?.url ?? page?.url ?? '/').replace(/\/page\/\d+\/$/, '/') }}" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96" />
@@ -32,6 +32,7 @@
     </script>
   </head>
   <body>
+    {{ include "partials/icons.vto" }}
     <a class="visually-hidden" href="#main-content">Skip to main content</a>
     <header class="site-header">
       <div class="wrapper">
@@ -50,7 +51,9 @@
 
     <script src="/js/glightbox.js"></script>
     <script>
-      const lightbox = GLightbox();
+      if (typeof GLightbox !== 'undefined') {
+        const lightbox = GLightbox();
+      }
     </script>
 
     <script>

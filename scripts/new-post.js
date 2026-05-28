@@ -1,5 +1,5 @@
 // Run with: node scripts/new-post.js "Post Title" [-c "cat1" "cat2"] [-t "tag1" "tag2"]
-import { writeFileSync } from "node:fs";
+import { existsSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const CONTENT_DIR = "content/blog";
@@ -59,6 +59,11 @@ function main() {
   const slug = slugify(title);
   const filename = `${slug}.md`;
   const filepath = join(CONTENT_DIR, filename);
+
+  if (existsSync(filepath)) {
+    console.error(`File already exists: ${filepath}`);
+    process.exit(1);
+  }
 
   const catEntry = `categories: [${formatList(categories)}]`;
   const tagEntry = `tags: [${formatList(tags)}]`;

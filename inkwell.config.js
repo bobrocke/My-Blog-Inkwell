@@ -1,8 +1,9 @@
 /** @type {import('inkwell-ssg').InkwellConfig} */
 export default {
   title: "My Blog Inkwell",
-  siteUrl: "https://bobrockefeller.com.com",
+  siteUrl: "https://bobrockefeller.com",
   description: "A site built with inkwell-ssg.",
+  language: "en-US",
 
   taxonomies: [
     { name: "tags", pageSize: 4, indexPageSize: 8 },
@@ -22,10 +23,10 @@ export default {
     limit: 20,
   },
 
-  // Default Shiki languages: javascript, typescript, php, html, erb, go, json, liquid, markdown, ruby, css
+  // Default Shiki languages: javascript, typescript, python, php, html, erb, go, json, liquid, markdown, ruby, css, vento
   // Add more languages as needed:
   shiki: {
-    langs: ["python", "rust", "bash", "twig", "jinja", "diff"],
+    langs: ["rust", "bash", "twig", "jinja", "diff"],
     lightTheme: "one-light",
     darkTheme: "one-dark-pro",
   },
