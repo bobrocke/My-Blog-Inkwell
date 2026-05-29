@@ -1,6 +1,6 @@
 {
   "name": "my-blog-inkwell",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "type": "module",
   "scripts": {
     "build": "inkwell build",
@@ -8,6 +8,6 @@
     "new-post": "node scripts/new-post.js"
   },
   "dependencies": {
-    "inkwell-ssg": "^0.2.1"
+    "inkwell-ssg": "^0.3.0"
   }
 }
