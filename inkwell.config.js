@@ -12,7 +12,7 @@ export default {
 
   collections: [
     {
-      name: "blog",
+      name: "Blog",
       pageSize: 4,
       url: "/",
     },

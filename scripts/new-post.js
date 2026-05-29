@@ -51,7 +51,7 @@ function main() {
 
   if (!title) {
     console.error(
-      "Usage: node scripts/new-post.js <title> [--categories cat1 cat2] [--tags tag1 tag2]"
+      "Usage: node scripts/new-post.js <title> [--categories cat1 cat2] [--tags tag1 tag2]",
     );
     process.exit(1);
   }
@@ -72,6 +72,7 @@ function main() {
     "---",
     `title: ${title}`,
     `date: ${now()}`,
+    `lastmod: `,
     catEntry,
     tagEntry,
     `draft: true`,
