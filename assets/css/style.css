@@ -1247,4 +1247,16 @@ a.pagination__btn:hover {
 
 [data-theme="light"] {
   color-scheme: light;
+  --color-bg:            #f9f9f7;
+  --color-surface:       #ffffff;
+  --color-surface-2:     #f2f2ef;
+  --color-text:          #1c1c1e;
+  --color-text-muted:    #6e6e73;
+  --color-accent:        #b45309;
+  --color-accent-dark:   #78350f;
+  --color-accent-bg:     #fef3c7;
+  --color-border:        #d1d1d6;
+  --color-border-subtle: #e5e5ea;
+  --color-code-bg:       #f2f2f7;
+  --color-code-text:     #c0392b;
 }
