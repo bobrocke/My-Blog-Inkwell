@@ -951,6 +951,10 @@ iframe.wait-autoplay {
 
 /* --- Custom Inkwell lightbox sizing --- */
 
+.glightbox-clean .gslide-media {
+  padding-top: var(--space-m);
+}
+
 .glightbox-container .gslide.current {
   width: 80vw;
   margin: 0 auto;

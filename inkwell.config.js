@@ -1,6 +1,6 @@
 /** @type {import('inkwell-ssg').InkwellConfig} */
 export default {
-  title: "My Blog Inkwell",
+  title: "My Blog",
   siteUrl: "https://bobrockefeller.com",
   description: "A site built with inkwell-ssg.",
   language: "en-US",
