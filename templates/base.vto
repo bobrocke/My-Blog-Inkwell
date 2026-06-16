@@ -4,17 +4,23 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content="Inkwell">
-    <title>{{ title ?? site.config.title }}</title>
+    {{ if site.mode == 'production' }}
+      <title>BR | {{ page?.title ?? listing?.title ?? site.config.title }}</title>
+      <script defer src="https://cloud.umami.is/script.js" data-website-id="e7ac9bf8-1c39-4b58-b5d9-05ee92f92cb9">
+      </script>
+    {{ else }}
+      <title>Inkwell | {{ page?.title ?? listing?.title ?? site.config.title }}</title>
+    {{ /if }}
     <meta name="description" content="{{ page?.frontmatter?.description ?? site.config.description }}" />
-    <meta property="og:title" content="{{ title ?? site.config.title }}" />
+    <meta property="og:title" content="{{ page?.title ?? listing?.title ?? site.config.title }}" />
     <meta property="og:description" content="{{ page?.frontmatter?.description ?? site.config.description }}" />
     <meta property="og:url" content="{{ site.config.siteUrl }}{{ page?.url ?? '/' }}" />
     <meta property="og:type" content="{{ page ? 'article' : 'website' }}" />
     <meta property="og:site_name" content="{{ site.config.title }}" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="{{ title ?? site.config.title }}" />
+    <meta name="twitter:title" content="{{ page?.title ?? listing?.title ?? site.config.title }}" />
     <meta name="twitter:description" content="{{ page?.frontmatter?.description ?? site.config.description }}" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.config.title }}" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.config.title }}" href="/rss.xml" />
     <link rel="canonical" href="{{ site.config.siteUrl }}{{ (listing?.url ?? page?.url ?? '/').replace(/\/page\/\d+\/$/, '/') }}" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96" />
@@ -32,6 +38,7 @@
     </script>
   </head>
   <body>
+    {{ include "partials/icons.vto" }}
     <a class="visually-hidden" href="#main-content">Skip to main content</a>
     <header class="site-header">
       <div class="wrapper">
@@ -50,7 +57,9 @@
 
     <script src="/js/glightbox.js"></script>
     <script>
-      const lightbox = GLightbox();
+      if (typeof GLightbox !== 'undefined') {
+        const lightbox = GLightbox();
+      }
     </script>
 
     <script>

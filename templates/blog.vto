@@ -1,35 +1,35 @@
 {{ layout "base.vto" }}
 
-  <div class="wrapper">
+  <div class="wrapper" data-width="narrow">
     <article class="post">
       <header class="post__header">
-      {{ include "partials/post-meta-dates.vto" }}
-      <h1 class="post__title">{{ page.frontmatter.title }}</h1>
-      {{ include "partials/post-meta-tax.vto" { categories: page.frontmatter.categories ?? [], tags: page.frontmatter.tags ?? [], page: page } }}
-    </header>
+        {{ include "partials/post-meta-dates.vto" }}
+        <h1 class="post__title">{{ page.frontmatter.title }}</h1>
+        {{ include "partials/post-meta-tax.vto" { categories: page.frontmatter.categories ?? [], tags: page.frontmatter.tags ?? [], page: page } }}
+      </header>
 
-    <div class="post__body flow">
-      {{ page.html }}
-    </div>
+      <div class="post__body flow">
+        {{ page.html }}
+      </div>
 
-    <footer class="post__footer">
-      {{ if page.prev || page.next }}
-        <nav class="post__nav" aria-label="Post navigation">
-          {{ if page.prev }}
-            <a href="{{ page.prev.url }}" class="post__nav-link post__nav-link--prev">
-              <span class="post__nav-label">← Previous</span>
-              <span class="post__nav-title">{{ page.prev.title }}</span>
-            </a>
-          {{ /if }}
-          {{ if page.next }}
-            <a href="{{ page.next.url }}" class="post__nav-link post__nav-link--next">
-              <span class="post__nav-label">Next →</span>
-              <span class="post__nav-title">{{ page.next.title }}</span>
-            </a>
-          {{ /if }}
-        </nav>
-      {{ /if }}
-    </footer>
+      <footer class="post__footer">
+        {{ if page.prev || page.next }}
+          <nav class="post__nav" aria-label="Post navigation">
+            {{ if page.prev }}
+              <a href="{{ page.prev.url }}" class="post__nav-link post__nav-link--prev">
+                <span class="post__nav-label">← Previous</span>
+                <span class="post__nav-title">{{ page.prev.title }}</span>
+              </a>
+            {{ /if }}
+            {{ if page.next }}
+              <a href="{{ page.next.url }}" class="post__nav-link post__nav-link--next">
+                <span class="post__nav-label">Next →</span>
+                <span class="post__nav-title">{{ page.next.title }}</span>
+              </a>
+            {{ /if }}
+          </nav>
+        {{ /if }}
+      </footer>
     </article>
   </div>
 
