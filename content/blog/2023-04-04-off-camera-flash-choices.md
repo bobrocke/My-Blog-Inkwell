@@ -13,7 +13,7 @@ For several years my battery-powered off-camera flash ‘system’ has been a mi
 
 <img src="/images/wp-content/uploads/2023/10/profoto-logo.png" alt="Profoto Logo" style="float: right; width: 50%; margin: 1em 0em 1em 1em">
 
-Having a real system of lights in multiple sizes using the same light modifiers and the same radio controllers/receivers was important to me. Pretty quickly my choices for strobes came down to [Godox](https://godox.com/) (variously branded as Godox, Newewer, FlashPoint, and perhaps others) and [Profoto](https://profoto.com/us/products/lights). There are many other brands, but they don’t have the breadth of options these two do.
+Having a real system of lights in multiple sizes using the same light modifiers and the same radio controllers/receivers was important to me. Pretty quickly my choices for strobes came down to [Godox](https://godox.com/) (variously branded as Godox, Neewer, FlashPoint, and perhaps others) and [Profoto](https://profoto.com/us/products/lights). There are many other brands, but they don’t have the breadth of options these two do.
 
 Godox and Profoto offer strobes for on-camera, off-camera (battery-powered), and studio (AC-powered) use. Their strobes all have built-in radio receivers and both offer radio transmitters for the big camera brands (Nikon, Canon, FujiFilm, and Sony). Godox also supports Olympus/Panasonic and Profoto supports Leica. Each provides for the option of both **T**hrough **t**he **L**ens (TTL) exposure control and **H**igh **S**peed **S**ync (HHS).
 
